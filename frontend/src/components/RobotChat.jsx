@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Draggable from "react-draggable";
 
-const AI_API_URL = https://ethereal-beauty-1.onrender.com;
+const AI_API_URL = import.meta.env.VITE_API_URL || "https://ethereal-beauty-1.onrender.com";
 
 function RobotChat({ onOpen = () => {} }) {
   return (
