@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import { getStoredIdentity, saveEmailIdentity } from "../lib/userIdentity.js";
 
-const SOCKET_URL = "http://localhost:5001";
+const SOCKET_URL = https://ethereal-beauty-1.onrender.com;
 
 const createRoomId = (firstUserId, secondUserId) =>
   [firstUserId.trim(), secondUserId.trim()].sort().join("__");
