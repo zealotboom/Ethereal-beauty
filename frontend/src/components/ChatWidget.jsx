@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import { getStoredIdentity, saveEmailIdentity } from "../lib/userIdentity.js";
 
-const SOCKET_URL = https://ethereal-beauty-1.onrender.com;
+const SOCKET_URL =  import.meta.env.VITE_API_URL;
 
 const createRoomId = (firstUserId, secondUserId) =>
   [firstUserId.trim(), secondUserId.trim()].sort().join("__");
