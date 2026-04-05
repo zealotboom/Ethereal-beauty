@@ -377,3 +377,20 @@ export const getAssetUrl = (path) => {
 
   return `${API_URL}${path}`;
 };
+export const sendMessageToAI = async (message, userId = "default") => {
+  const response = await fetch(`${API_URL}/ai-chat`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message, userId }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.reply || "AI failed");
+  }
+
+  return data;
+};
