@@ -47,7 +47,7 @@ export function AIChatContent({ onClose = () => {} }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch(AI_API_URL, {
+      const response = await fetch (`${AI_API_URL}/ai-chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
